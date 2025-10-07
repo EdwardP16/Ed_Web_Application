@@ -6,25 +6,25 @@
     <style>
         body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; background: #f9f9f9; padding: 24px; border-radius: 12px; }
         h1 { color: #ad2323; }
-        .info { margin-bottom: 16px; }
-        label { font-weight: bold; }
-        label { color:#ad2323; }
+        .info-box {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        label { font-weight: bold; color:#ad2323; }
     </style>
 </head>
 <body>
     <h1>Edward Thomas Pyne</h1>
-    <div>
-        <label>Personal Email:</label> edwardtpyne@gmail.com
+    <div class="info-box">
+        <div><label>Personal Email:</label> edwardtpyne@gmail.com</div>
+        <div><label>Phone Number:</label> +44 7702 373829</div>
+        <div><label>University Email:</label> e.pyne@edu.salford.ac.uk</div>
+        <div><label>Location:</label> Manchester, UK</div>
     </div>
-    <div>
-        <label>Phone Number:</label> +44 7702 373829
-    </div>
-    <div>
-        <label>University Email:</label> e.pyne@edu.salford.ac.uk
-    <div>
-        <label>Location:</label> Manchester, UK
-    </div>
-    <div>
+    <div class="info-box" style="margin-top:0;">
         <label>About Me:</label>
         <p>
             I am currently a student at The University of Salford studying Business Management with Innovation and Technology. I am also currently employed and working as a Kitchen Assistant in a Cafe in MediaCityUK called Mattina.
