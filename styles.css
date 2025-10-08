@@ -1,0 +1,50 @@
+/* Shared turtle-shell theme for the site */
+:root{
+    --shell-dark: #2b6a3a; /* deep turtle shell */
+    --shell-mid: #3f8a55;  /* mid green */
+    --shell-light: #dff2e1; /* pale green background */
+    --accent: #8bbf7a; /* accent green */
+    --muted: #6b6b6b;
+    --card-bg: #ffffff;
+    --radius-lg: 24px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, var(--shell-light) 0%, #f6fbf7 100%);
+    color: #163a24;
+    -webkit-font-smoothing:antialiased;
+}
+
+.top-panel {
+    background-color: var(--shell-mid);
+    color: #f7fff8;
+    padding: 52px 16px 28px 16px;
+    text-align: center;
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+    box-shadow: 0 6px 18px rgba(27, 67, 38, 0.12);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath fill='%233f8a55' d='M50 2 L90 26 L90 74 L50 98 L10 74 L10 26 Z' opacity='0.06'/%3E%3C/svg%3E"), linear-gradient(180deg, var(--shell-mid), var(--shell-dark));
+    background-blend-mode: overlay;
+    background-size: 180px, cover;
+    background-position: center top;
+}
+
+.top-panel h1{ margin: 0 0 6px 0; font-size: 2.1rem; letter-spacing: 0.6px; }
+.top-panel p{ margin: 0; font-size: 1.05rem; opacity: 0.95; }
+
+nav { margin: 20px 0 0 0; text-align: center; }
+nav a { color: var(--shell-dark); text-decoration: none; margin: 0 14px; font-weight: 700; font-size: 1.05em; transition: color 0.15s, transform 0.15s; padding: 6px 8px; border-radius: 8px; }
+nav a:hover { color: #fff; background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); transform: translateY(-2px); }
+
+.main-content { max-width: 900px; margin: 36px auto; background: var(--card-bg); padding: 36px; border-radius: 14px; box-shadow: 0 6px 20px rgba(19, 59, 33, 0.06); }
+
+.info-box { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 20px 24px; margin-bottom: 24px; }
+
+.btn-primary{ display: inline-block; background: linear-gradient(180deg,var(--shell-dark),var(--accent)); color: #fff; padding: 10px 18px; border-radius: 10px; text-decoration: none; font-weight: 700; box-shadow: 0 6px 18px rgba(43,106,58,0.18); }
+
+footer{ text-align:center; color:var(--muted); padding: 36px 16px; font-size:0.95rem; }
+
+/* Responsive adjustments */
+@media (max-width: 840px){ .hero { grid-template-columns: 1fr; } nav a{ margin: 6px; display:inline-block } }
