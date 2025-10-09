@@ -48,3 +48,9 @@ footer{ text-align:center; color:var(--muted); padding: 36px 16px; font-size:0.9
 
 /* Responsive adjustments */
 @media (max-width: 840px){ .hero { grid-template-columns: 1fr; } nav a{ margin: 6px; display:inline-block } }
+
+/* helper for two-column content (used on skills page) */
+.split-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 840px){ .split-columns { grid-template-columns: 1fr; } }
+
+.info-box ul { margin: 8px 0 0 1.1rem; }
