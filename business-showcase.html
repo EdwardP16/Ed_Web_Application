@@ -5,39 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turtle Eats — Business Showcase</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* page-specific small rules */
-        .hero { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: center; }
+        .hero { display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: center; }
         .hero img{ width:100%; border-radius:12px; box-shadow:0 8px 30px rgba(31,73,44,0.08); border:6px solid rgba(139,191,122,0.08); object-fit:cover }
+
+        .top-panel.hero-banner{
+            padding: 72px 20px;
+            min-height: 420px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background: linear-gradient(180deg, rgba(63,138,85,0.95) 0%, rgba(43,106,58,0.95) 100%), url('images/turtle-chatgpt-image.png') right 10% center no-repeat;
+            background-size: auto 88%;
+            color: #fff;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 10px 40px rgba(12,36,20,0.12);
+        }
+
+        .hero-inner{
+            max-width:1100px;
+            width:100%;
+            display:flex;
+            align-items:center;
+            gap:36px;
+        }
+
+        .hero-copy{ max-width:640px; }
+        .hero-copy h1{
+            margin:0 0 8px 0;
+            font-family: 'Playfair Display', serif;
+            font-weight:700;
+            font-size:3.2rem;
+            line-height:1.02;
+            letter-spacing:0.4px;
+        }
+
+        .hero-copy .lead{
+            margin:0 0 18px 0;
+            color: rgba(255,255,255,0.92);
+            font-size:1.05rem;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            font-weight:300;
+        }
+
+        /* refined CTA */
+        .btn-primary{
+            background: #fff;
+            color: var(--shell-dark);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight:700;
+            box-shadow: 0 8px 20px rgba(31,73,44,0.12);
+            text-decoration:none;
+        }
+
+        @media (max-width:900px){
+            .top-panel.hero-banner{ background-position: center; background-size: cover; padding: 46px 16px; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-inner{ flex-direction:column; align-items:flex-start }
+            .hero-copy h1{ font-size:2.2rem }
+        }
     </style>
 </head>
 <body>
-    <div class="top-panel">
-        <h1>Turtle Eats!</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="top-panel hero-banner">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <h1>Turtle Eats</h1>
+                <p class="lead">A refined vegetarian restaurant celebrating seasonal produce and thoughtful flavours. Join our waitlist for opening updates and exclusive events.</p>
+                <p><a class="btn-primary" href="contact.html#waitlist">Join the Waitlist</a></p>
+            </div>
+        </div>
     </div>
-    <nav>
+    <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="business-showcase.html">Business Showcase</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
         <a href="problem-solving.html">Problem Solving</a>
     </nav>
-    <div class="main-content">
-        <div class="hero">
-            <div>
-                <h2>Welcome to Turtle Eats</h2>
-                <p>Fresh, vibrant, plant-based dishes inspired by coastal flavors. We're building a warm, sustainable vegetarian restaurant focused on seasonal produce and bold taste.</p>
-                <p><strong>Opening Soon:</strong> join our waitlist to get early updates and exclusive tasting events.</p>
-                <p><a class="btn-primary" href="contact.html#waitlist">Join the Waitlist</a></p>
-            </div>
-            <div>
-                <img src="images/turtle-chatgpt-image.png" alt="Turtle Eats mascot">
-            </div>
-        </div>
+    <main id="main">
+    <div class="main-content" role="region" aria-label="Business information">
+        <section style="line-height:1.6; color:var(--muted);">
+            <h3>Welcome</h3>
+            <p>Fresh, vibrant, plant-based dishes inspired by coastal flavors. We're building a warm, sustainable vegetarian restaurant focused on seasonal produce and bold taste. Join our waitlist above for early updates.</p>
+        </section>
         <section style="margin-top:22px; line-height:1.6; color:var(--muted);">
             <h3>Our vision</h3>
             <p>At Turtle Eats we celebrate vegetables with creative techniques and layered flavors. Our menus change with the seasons and focus on local suppliers.</p>
         </section>
     </div>
+    </main>
 </body>
-</html>
+</html> 
