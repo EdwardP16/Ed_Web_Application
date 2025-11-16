@@ -31,36 +31,31 @@
             <div><label>University Email:</label> e.pyne@edu.salford.ac.uk</div>
             <div><label>Phone Number:</label> +44 7702 373829</div>
             <div><label>Location:</label> Manchester, UK</div>
-        </div>
-        <div class="info-box" style="margin-top:0;">
-            <label>About Me:</label>
-            <p>
-                I am currently a student at The University of Salford studying Business Management with Innovation and Technology. I am also currently employed and working as a Kitchen Assistant in a Cafe in MediaCityUK called Mattina.
-            </p>
-        </div>
+        </div
+    
     </div>
-    <div class="main-content" id="waitlist" style="max-width:800px; margin:28px auto 56px auto;">
-        <h2 style="margin-top:0; color:#2b6a3a;">Turtle Eats Waitlist</h2>
-        <p style="color:#6b6b6b;">Leave your details below and we'll contact you about opening dates and tasting events.</p>
-        <form action="#" method="post" aria-labelledby="waitlist-heading" aria-describedby="waitlist-desc" style="margin-top:12px;">
+    <div class="main-content waitlist-container" id="waitlist">
+        <h2 class="waitlist-heading">Turtle Eats Waitlist</h2>
+        <p class="waitlist-desc">Leave your details below and we'll contact you about opening dates and tasting events.</p>
+        <form action="#" method="post" aria-labelledby="waitlist-heading" aria-describedby="waitlist-desc" class="waitlist-form">
             <div id="waitlist-desc" class="sr-only">Fields marked required are necessary for us to contact you.</div>
-            <div style="display:grid; grid-template-columns:1fr; gap:12px;">
+            <div class="form-grid">
                 <div>
-                    <label for="wt-name" style="font-weight:bold;">Name <span aria-hidden="true">*</span></label>
-                    <input id="wt-name" name="name" type="text" required aria-required="true" placeholder="Your full name" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-top:6px;">
+                    <label for="wt-name">Name <span aria-hidden="true">*</span></label>
+                    <input id="wt-name" name="name" type="text" required aria-required="true" placeholder="Your full name" class="input-field">
                 </div>
                 <div>
-                    <label for="wt-email" style="font-weight:bold;">Email <span aria-hidden="true">*</span></label>
-                    <input id="wt-email" name="email" type="email" required aria-required="true" placeholder="you@example.com" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-top:6px;">
+                    <label for="wt-email">Email <span aria-hidden="true">*</span></label>
+                    <input id="wt-email" name="email" type="email" required aria-required="true" placeholder="you@example.com" class="input-field">
                 </div>
             </div>
             <div style="margin-top:12px;">
-                <label for="wt-message" style="font-weight:bold;">Message</label>
-                <textarea id="wt-message" name="message" rows="5" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-top:6px;" placeholder="Optional message"></textarea>
+                <label for="wt-message">Message</label>
+                <textarea id="wt-message" name="message" rows="5" class="input-field" placeholder="Optional message"></textarea>
             </div>
             <div style="margin-top:16px;">
-                <button type="submit" style="background:#3f8a55; color:#fff; padding:10px 16px; border-radius:8px; border:none; font-weight:700; cursor:pointer;" aria-label="Submit waitlist form">Submit</button>
-                <div role="status" aria-live="polite" id="waitlist-status" style="margin-top:8px; color:var(--muted);"></div>
+                <button type="submit" class="btn-primary" aria-label="Submit waitlist form">Submit</button>
+                <div role="status" aria-live="polite" id="waitlist-status" class="waitlist-status"></div>
             </div>
         </form>
     </div>
