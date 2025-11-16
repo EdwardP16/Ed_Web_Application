@@ -49,6 +49,64 @@
                 </ul>
             </div>
         </div>
-    </div>
+                <div class="info-box">
+                        <h2>Certificates</h2>
+                        <p>LinkedIn Learning Certificates</p>
+
+                        <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Show LinkedIn Learning Certificates. Click or press Enter to flip.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-front-content">
+                                        <span class="flip-title">LinkedIn Learning Certificates</span>
+                                        <span class="flip-sub">Click to reveal</span>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <img
+                                        src="images/LILC.png"
+                                        alt="Four LinkedIn Learning certificates"
+                                        class="cert-image"
+                                        loading="lazy"
+                                        width="1200" height="800">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                                </div>
+                                <script>
+                                
+                                (function(){
+                                    document.querySelectorAll('.flip-card').forEach(function(card){
+                                        var img = card.querySelector('.flip-card-back img');
+                                        function setRatio(){
+                                            if(!img) return;
+                                            var w = img.naturalWidth || img.width;
+                                            var h = img.naturalHeight || img.height;
+                                            if(w && h){
+                                                
+                                                try{ card.style.aspectRatio = w + ' / ' + h; }catch(e){}
+                                                
+                                                var cap = 900;
+                                                card.style.maxWidth = (w > cap ? cap : w) + 'px';
+                                            }
+                                        }
+                                        if(img){
+                                            if(img.complete){ setRatio(); }
+                                            else { img.addEventListener('load', setRatio); }
+                                        }
+
+                                        function toggle(){
+                                            card.classList.toggle('is-flipped');
+                                            card.setAttribute('aria-pressed', card.classList.contains('is-flipped'));
+                                        }
+                                        card.addEventListener('click', toggle);
+                                        card.addEventListener('keydown', function(e){
+                                            if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
+                                                e.preventDefault(); toggle();
+                                            }
+                                        });
+                                    });
+                                })();
+                                </script>
 </body>
 </html> 
