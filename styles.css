@@ -1,8 +1,8 @@
 :root{
     --shell-dark: #2b6a3a; 
     --shell-mid: #3f8a55;  
-    --shell-light: #63ce6e; 
-    --accent: #8bbf7a; 
+    --shell-light: #c7e9ca; 
+    --accent: #d2e9ca; 
     --muted: #6b6b6b;
     --card-bg: #ffffff;
     --radius-lg: 24px;
@@ -118,6 +118,22 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
 .input-field { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-top: 6px; box-sizing: border-box; }
 .button-submit, button.btn-primary { cursor: pointer; }
 .waitlist-status { margin-top: 8px; color: var(--muted); }
+
+/* Mobile download button for menu image */
+.download-btn {
+    display: inline-block;
+    margin: 12px auto 0;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--shell-dark);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(43,106,58,0.18);
+}
+.download-note { margin-top:8px; color: rgba(255,255,255,0.9); font-size:0.95rem; }
+
+/* download button visible on all screen sizes by default */
 
 .cert-image {
     max-width: 100%;

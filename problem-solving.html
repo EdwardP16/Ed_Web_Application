@@ -103,6 +103,9 @@
         <section style="margin-top:34px; text-align:center;">
             <h3 style="margin-bottom:14px;">Check out our First Menu</h3>
             <img src="images/Tmenu.png" alt="Turtle Eats first menu" style="max-width:440px;width:50%;height:auto;display:block;margin:0 auto;border-radius:12px;box-shadow:0 12px 36px rgba(12,36,20,0.16);">
+            <a id="download-menu-btn" class="download-btn" href="images/Tmenu.png" data-src="images/Tmenu.png" download>Download Menu</a>
+            <div id="download-menu-status" class="sr-only" aria-live="polite"></div>
+            <div class="download-note">Tip: Tap "Download Menu" to save and view full-size on your phone.</div>
         </section>
     </div>
     </main>
@@ -111,5 +114,31 @@
                 <p>&copy; 2025 Turtle Eats — <a href="mailto:turtleeats@gmail.com">turtleeats@gmail.com</a></p>
             </div>
         </footer>
+        <script>
+        (function(){
+            var btn = document.getElementById('download-menu-btn');
+            var status = document.getElementById('download-menu-status');
+            if(!btn) return;
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                var url = btn.getAttribute('data-src') || btn.href;
+                fetch(url).then(function(resp){ return resp.blob(); }).then(function(blob){
+                    var urlObj = URL.createObjectURL(blob);
+                    var a = document.createElement('a');
+                    a.href = urlObj;
+                    a.download = 'Turtle-Eats-Menu.png';
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    URL.revokeObjectURL(urlObj);
+                    if(status) { status.textContent = 'Menu download started.'; }
+                }).catch(function(){
+                    // Fallback: open image in new tab (useful for iOS where download may be limited)
+                    window.open(url, '_blank');
+                    if(status) { status.textContent = 'Opened menu in a new tab.'; }
+                });
+            });
+        })();
+        </script>
 </body>
 </html>
