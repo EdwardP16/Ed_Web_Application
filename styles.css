@@ -49,9 +49,8 @@ nav a:hover { color: #fff; background: linear-gradient(90deg, rgba(255,255,255,0
 
 footer{ text-align:center; color:var(--muted); padding: 36px 16px; font-size:0.95rem; }
 
-/* Bottom panel footer that matches the top-panel turtle-shell theme */
 footer.bottom-panel{
-    /* match the top-panel background (pattern + gradient) for a consistent look */
+
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath fill='%233f8a55' d='M50 2 L90 26 L90 74 L50 98 L10 74 L10 26 Z' opacity='0.06'/%3E%3C/svg%3E"), linear-gradient(180deg, var(--shell-mid), var(--shell-dark));
     background-blend-mode: overlay;
     background-size: 180px, cover;
@@ -119,7 +118,6 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
 .button-submit, button.btn-primary { cursor: pointer; }
 .waitlist-status { margin-top: 8px; color: var(--muted); }
 
-/* Mobile download button for menu image */
 .download-btn {
     display: inline-block;
     margin: 12px auto 0;
@@ -132,8 +130,6 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
     box-shadow: 0 6px 18px rgba(43,106,58,0.18);
 }
 .download-note { margin-top:8px; color: rgba(255,255,255,0.9); font-size:0.95rem; }
-
-/* download button visible on all screen sizes by default */
 
 .cert-image {
     max-width: 100%;
