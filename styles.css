@@ -223,7 +223,7 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
 */
 .navbar, .top-panel {
     /* overlay first so it sits above the pattern */
-    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('/images/GPTurtleshell.png');
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/GPTurtleshell.png');
     background-repeat: repeat, repeat;
     background-position: 0 0, 0 0;
     background-attachment: scroll, scroll;
@@ -231,7 +231,7 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
 }
 
 .footer, footer.bottom-panel {
-    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('/images/GPTurtleshell.png');
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/GPTurtleshell.png');
     background-repeat: repeat, repeat;
     background-position: 0 0, 0 0;
     background-attachment: scroll, scroll;
