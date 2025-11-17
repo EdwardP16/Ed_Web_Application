@@ -102,10 +102,100 @@
         </section>
         <section style="margin-top:34px; text-align:center;">
             <h3 style="margin-bottom:14px;">Check out our First Menu</h3>
-            <img src="images/Tmenu.png" alt="Turtle Eats first menu" style="max-width:440px;width:50%;height:auto;display:block;margin:0 auto;border-radius:12px;box-shadow:0 12px 36px rgba(12,36,20,0.16);">
-            <a id="download-menu-btn" class="download-btn" href="images/Tmenu.png" data-src="images/Tmenu.png" download>Download Menu</a>
-            <div id="download-menu-status" class="sr-only" aria-live="polite"></div>
-            <div class="download-note">Tip: Tap "Download Menu" to save and view full-size on your phone.</div>
+            <!-- Interactive menu component (replaces static image) -->
+            <div class="menu-container" role="region" aria-label="Turtle Eats Menu">
+                <h1 class="title">TURTLE EATS</h1>
+                <p class="subtitle">Plant-Based Japanese Cuisine</p>
+
+                <!-- DRINKS -->
+                <section class="menu-section">
+                    <h2>DRINKS</h2>
+                    <div class="item">
+                        <span class="item-name">Green Tea</span>
+                        <span class="item-price">Free with any main</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Plum Sake</span>
+                        <span class="item-price">£5</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Asahi or Sapporo</span>
+                        <span class="item-price">Half Pint £3 | Pint £6</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Cherry Blossom Lemonade</span>
+                        <span class="item-price">£4</span>
+                    </div>
+                </section>
+
+                <!-- SIDES -->
+                <section class="menu-section">
+                    <h2>SIDES</h2>
+
+                    <div class="item">
+                        <span class="item-name">Miso-Glazed Tenderstem</span>
+                        <span class="item-price">£5.45</span>
+                        <p class="description">Finished with roasted sesame seeds.</p>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Hoso Maki</span>
+                        <span class="item-price">4 pieces £3.75 | 8 pieces £6</span>
+                        <p class="description">Cucumber, pickle, or avocado.</p>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Garlic Tahini Green Beans</span>
+                        <span class="item-price">£4</span>
+                        <p class="description">Lightly charred beans tossed in a creamy garlic-tahini sauce.</p>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Crispy Fries with Sriracha Mayo</span>
+                        <span class="item-price">£5</span>
+                        <p class="description">Golden fries served with spicy vegan sriracha mayo.</p>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chilli & Garlic Edamame</span>
+                        <span class="item-price">£4</span>
+                        <p class="description">Steamed edamame sautéed with chilli and garlic.</p>
+                    </div>
+                </section>
+
+                <!-- MAINS -->
+                <section class="menu-section">
+                    <h2>MAINS</h2>
+
+                    <div class="item">
+                        <span class="item-name">Vegan Tempura Ramen</span>
+                        <span class="item-price">£11</span>
+                        <p class="description">
+                            Crispy vegetable tempura served in a rich, aromatic vegan broth.
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Japanese Carbonara</span>
+                        <span class="item-price">£12.50</span>
+                        <p class="description">
+                            A miso-infused, plant-based take on carbonara with shiitake mushrooms.
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Grilled Lotus Root & Kombu Rice</span>
+                        <span class="item-price">£8.45</span>
+                        <p class="description">
+                            Chargrilled lotus root served with fragrant kombu-infused rice.
+                        </p>
+                    </div>
+
+                </section>
+            </div>
         </section>
     </div>
     </main>
