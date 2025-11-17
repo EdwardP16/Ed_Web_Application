@@ -16,24 +16,32 @@ body {
     -webkit-font-smoothing:antialiased;
 }
 
+/* Make pages use a column flex layout so footer can sit at the bottom */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 .top-panel {
     background-color: var(--shell-mid);
     color: #f7fff8;
-    padding: 52px 16px 28px 16px;
+    /* extra-compact header panel */
+    padding: 12px 10px;
     text-align: center;
-    border-bottom-left-radius: var(--radius-lg);
-    border-bottom-right-radius: var(--radius-lg);
-    box-shadow: 0 6px 18px rgba(27, 67, 38, 0.12);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 2px 6px rgba(27, 67, 38, 0.06);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath fill='%233f8a55' d='M50 2 L90 26 L90 74 L50 98 L10 74 L10 26 Z' opacity='0.06'/%3E%3C/svg%3E"), linear-gradient(180deg, var(--shell-mid), var(--shell-dark));
     background-blend-mode: overlay;
     background-size: 180px, cover;
     background-position: center top;
 }
 
-.top-panel h1{ margin: 0 0 6px 0; font-size: 2.1rem; letter-spacing: 0.6px; }
-.top-panel p{ margin: 0; font-size: 1.05rem; opacity: 0.95; }
+.top-panel h1{ margin: 0 0 4px 0; font-size: 1.6rem; letter-spacing: 0.4px; font-weight:600; }
+.top-panel p{ margin: 0; font-size: 0.95rem; opacity: 0.95; }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 
@@ -41,7 +49,7 @@ nav { margin: 20px 0 0 0; text-align: center; }
 nav a { color: var(--shell-dark); text-decoration: none; margin: 0 14px; font-weight: 700; font-size: 1.05em; transition: color 0.15s, transform 0.15s; padding: 6px 8px; border-radius: 8px; }
 nav a:hover { color: #fff; background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); transform: translateY(-2px); }
 
-.main-content { max-width: 1100px; margin: 36px auto; background: var(--card-bg); padding: 36px; border-radius: 14px; box-shadow: 0 6px 20px rgba(19, 59, 33, 0.06); }
+.main-content { max-width: 1100px; margin: 36px auto; background: var(--card-bg); padding: 36px; border-radius: 14px; box-shadow: 0 6px 20px rgba(19, 59, 33, 0.06); flex: 1 0 auto; }
 
 .info-box { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 20px 24px; margin-bottom: 24px; }
 
@@ -50,19 +58,19 @@ nav a:hover { color: #fff; background: linear-gradient(90deg, rgba(255,255,255,0
 footer{ text-align:center; color:var(--muted); padding: 36px 16px; font-size:0.95rem; }
 
 footer.bottom-panel{
-
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath fill='%233f8a55' d='M50 2 L90 26 L90 74 L50 98 L10 74 L10 26 Z' opacity='0.06'/%3E%3C/svg%3E"), linear-gradient(180deg, var(--shell-mid), var(--shell-dark));
     background-blend-mode: overlay;
     background-size: 180px, cover;
     background-position: center top;
     color: #f7fff8;
-    padding: 28px 16px;
+    /* extra-compact, rectangular footer */
+    padding: 8px 10px;
     text-align: center;
-    font-size: 0.95rem;
-    border-top-left-radius: var(--radius-lg);
-    border-top-right-radius: var(--radius-lg);
-    box-shadow: 0 -8px 28px rgba(12,36,20,0.12);
-    margin-top: 36px;
+    font-size: 0.9rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 -2px 6px rgba(12,36,20,0.06);
+    margin-top: 18px;
 }
 
 footer.bottom-panel .container{ padding: 6px 16px; }
@@ -202,4 +210,30 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
 @media (max-width: 600px){
     .flip-card { max-width: 100%; }
     .flip-card-front, .flip-card-back { min-height: 140px; }
+}
+
+/* Turtle-shell repeating pattern for top and bottom bars
+   Applied to both requested selectors (.navbar/.footer) and the
+   existing classes used in the site (.top-panel, footer.bottom-panel).
+
+   Notes:
+   - pattern repeats horizontally and vertically (background-repeat: repeat)
+   - we avoid background-size: cover to prevent stretching
+   - use a semi-opaque linear-gradient overlay on top to keep text readable
+*/
+.navbar, .top-panel {
+    /* overlay first so it sits above the pattern */
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('/images/GPTurtleshell.png');
+    background-repeat: repeat, repeat;
+    background-position: 0 0, 0 0;
+    background-attachment: scroll, scroll;
+    background-color: var(--shell-mid); /* fallback */
+}
+
+.footer, footer.bottom-panel {
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('/images/GPTurtleshell.png');
+    background-repeat: repeat, repeat;
+    background-position: 0 0, 0 0;
+    background-attachment: scroll, scroll;
+    background-color: var(--shell-mid); /* fallback */
 }
