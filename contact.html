@@ -8,6 +8,18 @@
     <style>
         label { font-weight: bold; color: #3f8a55; }
         .main-content { max-width: 800px; }
+        @media (max-width: 600px) {
+            .main-content.flex-contact {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 0 !important;
+            }
+            .main-content.flex-contact > div {
+                width: 100% !important;
+                min-width: 0 !important;
+                margin: 0 auto 18px auto !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -25,14 +37,19 @@
         <a href="problem-solving.html">Problem Solving</a>
     </nav>
     <main id="main">
-    <div class="main-content">
-        <div class="info-box">
+    <div class="main-content flex-contact" style="display: flex; align-items: flex-start; gap: 32px;">
+        <div style="flex:0 0 220px; text-align:center;">
+            <div style="width:200px; height:220px; display:flex; align-items:center; justify-content:center; margin:0 auto;">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG5qNGhrZjAzYTdjcHQyOGE1bGlneWF3NmoyZHl1cjhpdGR5NGNsdiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sfPlC3WxH1ARi/giphy.gif" alt="Turtle GIF" style="width:180px; height:220px; object-fit:cover; border-radius:50% / 40%; box-shadow:0 4px 18px rgba(63,138,85,0.18);">
+            </div>
+            <div style="margin-top:18px; font-size:1.08rem; color:#3f8a55; font-weight:500;">Don't be scared to come out of your shell and contact me!</div>
+        </div>
+        <div class="info-box" style="flex:1 1 0; min-width:220px;">
             <div><label>Personal Email:</label> edwardtpyne@gmail.com</div>
             <div><label>University Email:</label> e.pyne@edu.salford.ac.uk</div>
             <div><label>Phone Number:</label> +44 7702 373829</div>
             <div><label>Location:</label> Manchester, UK</div>
-        </div
-    
+        </div>
     </div>
     <div class="main-content waitlist-container" id="waitlist">
         <h2 class="waitlist-heading">Turtle Eats Waitlist</h2>
