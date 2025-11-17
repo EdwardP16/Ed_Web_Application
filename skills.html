@@ -49,6 +49,238 @@
                 </ul>
             </div>
         </div>
+        <!-- Timeline Component Start -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <style>
+        .timeline-container {
+          font-family: 'Inter', Arial, sans-serif;
+          background: #f8fbf8;
+          padding: 36px 0;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+        .timeline-title {
+          text-align: center;
+          font-size: 2.1rem;
+          font-weight: 600;
+          color: #2b6a3a;
+          margin-bottom: 32px;
+          letter-spacing: 0.5px;
+        }
+        .timeline {
+          position: relative;
+          margin: 0;
+          padding: 0 0 0 24px;
+        }
+        .timeline::before {
+          content: '';
+          position: absolute;
+          left: 32px;
+          top: 0;
+          bottom: 0;
+          width: 3px;
+          background: linear-gradient(180deg, #c7e9ca 0%, #3f8a55 100%);
+          border-radius: 2px;
+        }
+        .timeline-item {
+          position: relative;
+          margin-bottom: 32px;
+          background: #fff;
+          border-radius: 18px;
+          box-shadow: 0 4px 18px rgba(43,106,58,0.07);
+          padding: 24px 32px 24px 56px;
+          transition: box-shadow 0.2s, transform 0.2s;
+          cursor: pointer;
+          border: 1px solid #e3efe3;
+          overflow: hidden;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item:hover, .timeline-item.active {
+          box-shadow: 0 8px 32px rgba(43,106,58,0.13);
+          transform: translateY(-2px) scale(1.01);
+        }
+        .timeline-dot {
+          position: absolute;
+          left: 18px;
+          top: 32px;
+          width: 18px;
+          height: 18px;
+          background: #7ed957;
+          border: 3px solid #fff;
+          border-radius: 50%;
+          box-shadow: 0 2px 8px rgba(43,106,58,0.10);
+          transition: background 0.2s;
+        }
+        .timeline-item.active .timeline-dot {
+          background: #3f8a55;
+        }
+        .timeline-header {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        .timeline-role {
+          font-size: 1.08rem;
+          font-weight: 600;
+          color: #2b6a3a;
+          margin-bottom: 2px;
+        }
+        .timeline-company {
+          font-size: 1.02rem;
+          color: #3f8a55;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+        }
+        .timeline-dates {
+          font-size: 0.98rem;
+          color: #7ed957;
+          font-weight: 400;
+          margin-bottom: 8px;
+        }
+        .timeline-details {
+          max-height: 0;
+          opacity: 0;
+          transition: max-height 0.35s cubic-bezier(.2,.8,.2,1), opacity 0.25s;
+          overflow: hidden;
+          margin-top: 10px;
+          padding-left: 2px;
+        }
+        .timeline-item.active .timeline-details {
+          max-height: 400px;
+          opacity: 1;
+          transition: max-height 0.45s cubic-bezier(.2,.8,.2,1), opacity 0.35s;
+        }
+        .timeline-details ul {
+          margin: 0;
+          padding: 0 0 0 18px;
+          color: #222;
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+        .timeline-details li {
+          margin-bottom: 6px;
+          padding-left: 0;
+          list-style: disc;
+        }
+        @media (max-width: 700px) {
+          .timeline-container { padding: 18px 0; }
+          .timeline-item { padding: 18px 18px 18px 48px; }
+          .timeline-dot { left: 10px; top: 28px; }
+          .timeline::before { left: 20px; }
+        }
+        @media (max-width: 480px) {
+          .timeline-title { font-size: 1.3rem; }
+          .timeline-item { padding: 14px 10px 14px 38px; font-size: 0.98rem; }
+          .timeline-dot { left: 2px; top: 22px; width: 14px; height: 14px; }
+          .timeline::before { left: 10px; }
+        }
+        </style>
+        <div class="timeline-container">
+          <div class="timeline-title">Work Experience</div>
+          <div class="timeline" id="timeline">
+            <!-- Mattina Coffee -->
+            <div class="timeline-item" tabindex="0">
+              <span class="timeline-dot"></span>
+              <div class="timeline-header">
+                <span class="timeline-role">Chef de Partie</span>
+                <span class="timeline-company">Mattina Coffee</span>
+                <span class="timeline-dates">04/25–Ongoing</span>
+              </div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Creating and adapting menu</li>
+                  <li>Efficient teamworking</li>
+                  <li>Effective communication</li>
+                  <li>High-pressure performance</li>
+                  <li>Identifying improvements</li>
+                  <li>Using technology in kitchen</li>
+                </ul>
+              </div>
+            </div>
+            <!-- La Gaby Ltd -->
+            <div class="timeline-item" tabindex="0">
+              <span class="timeline-dot"></span>
+              <div class="timeline-header">
+                <span class="timeline-role">Pizza Chef</span>
+                <span class="timeline-company">La Gaby Ltd</span>
+                <span class="timeline-dates">11/23–03/24</span>
+              </div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Time management</li>
+                  <li>HSE compliance</li>
+                  <li>Creativity</li>
+                  <li>Team coordination</li>
+                  <li>Food quality consistency</li>
+                  <li>Customer dietary care</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Hargreaves & Son -->
+            <div class="timeline-item" tabindex="0">
+              <span class="timeline-dot"></span>
+              <div class="timeline-header">
+                <span class="timeline-role">Kitchen Assistant</span>
+                <span class="timeline-company">Hargreaves & Son</span>
+                <span class="timeline-dates">06/22–08/24</span>
+              </div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Fast-paced environment</li>
+                  <li>Stress management</li>
+                  <li>Stocking</li>
+                  <li>Supporting team</li>
+                  <li>Cooking & waiting skills</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Airbnb -->
+            <div class="timeline-item" tabindex="0">
+              <span class="timeline-dot"></span>
+              <div class="timeline-header">
+                <span class="timeline-role">Cleaner/Caretaker</span>
+                <span class="timeline-company">Airbnb</span>
+                <span class="timeline-dates">03/23–06/23</span>
+              </div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Time keeping</li>
+                  <li>Self-management</li>
+                  <li>Restocking & reporting</li>
+                  <li>Cleaning equipment</li>
+                  <li>Customer service</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+        document.querySelectorAll('.timeline-item').forEach(function(item) {
+          item.addEventListener('click', function() {
+            item.classList.toggle('active');
+          });
+          item.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              item.classList.toggle('active');
+            }
+          });
+        });
+        // Subtle scroll-in animation
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.timeline-item').forEach(item => {
+          item.style.opacity = 0;
+          item.style.transform = 'translateY(40px)';
+          observer.observe(item);
+        });
+        </script>
+        <!-- Timeline Component End -->
                 <div class="info-box">
                         <h2>Certificates</h2>
                         <p>LinkedIn Learning Certificates</p>
@@ -114,4 +346,4 @@
                                         </div>
                                     </footer>
 </body>
-</html> 
+</html>
