@@ -176,7 +176,13 @@
         }
         </style>
         <div class="timeline-container">
-          <div class="timeline-title">Work Experience</div>
+          <div class="timeline-title" style="display:flex;align-items:center;justify-content:center;gap:10px;">
+            <span>Work Experience</span>
+            <span class="hint-icon" tabindex="0" aria-label="Click on each panel to reveal more!" style="display:inline-flex;align-items:center;cursor:pointer;position:relative;">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-right:2px;"><circle cx="11" cy="11" r="11" fill="#7ed957"/><text x="11" y="16" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#fff">?</text></svg>
+              <span class="hint-tooltip" style="visibility:hidden;opacity:0;position:absolute;left:28px;top:50%;transform:translateY(-50%);background:#fff;border:1px solid #c7e9ca;padding:7px 14px;border-radius:8px;box-shadow:0 2px 8px rgba(43,106,58,0.10);color:#2b6a3a;font-size:0.98rem;white-space:nowrap;transition:opacity 0.2s;z-index:10;">Click on each panel to reveal more!</span>
+            </span>
+          </div>
           <div class="timeline" id="timeline">
             <!-- Mattina Coffee -->
             <div class="timeline-item" tabindex="0">
@@ -279,6 +285,19 @@
           item.style.transform = 'translateY(40px)';
           observer.observe(item);
         });
+        // Hint icon tooltip logic
+        (function(){
+          var hintIcon = document.querySelector('.hint-icon');
+          var tooltip = hintIcon ? hintIcon.querySelector('.hint-tooltip') : null;
+          if(hintIcon && tooltip){
+            function showTip(){ tooltip.style.visibility = 'visible'; tooltip.style.opacity = 1; }
+            function hideTip(){ tooltip.style.visibility = 'hidden'; tooltip.style.opacity = 0; }
+            hintIcon.addEventListener('mouseenter', showTip);
+            hintIcon.addEventListener('mouseleave', hideTip);
+            hintIcon.addEventListener('focus', showTip);
+            hintIcon.addEventListener('blur', hideTip);
+          }
+        })();
         </script>
         <!-- Timeline Component End -->
                 <div class="info-box">
