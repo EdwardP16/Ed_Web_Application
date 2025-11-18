@@ -16,7 +16,6 @@ body {
     -webkit-font-smoothing:antialiased;
 }
 
-/* Make pages use a column flex layout so footer can sit at the bottom */
 body {
     min-height: 100vh;
     display: flex;
@@ -28,7 +27,6 @@ body {
 .top-panel {
     background-color: var(--shell-mid);
     color: #f7fff8;
-    /* extra-compact header panel */
     padding: 12px 10px;
     text-align: center;
     border-bottom-left-radius: 0;
@@ -63,7 +61,6 @@ footer.bottom-panel{
     background-size: 180px, cover;
     background-position: center top;
     color: #f7fff8;
-    /* extra-compact, rectangular footer */
     padding: 8px 10px;
     text-align: center;
     font-size: 0.9rem;
@@ -212,22 +209,12 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
     .flip-card-front, .flip-card-back { min-height: 140px; }
 }
 
-/* Turtle-shell repeating pattern for top and bottom bars
-   Applied to both requested selectors (.navbar/.footer) and the
-   existing classes used in the site (.top-panel, footer.bottom-panel).
-
-   Notes:
-   - pattern repeats horizontally and vertically (background-repeat: repeat)
-   - we avoid background-size: cover to prevent stretching
-   - use a semi-opaque linear-gradient overlay on top to keep text readable
-*/
 .navbar, .top-panel {
-    /* overlay first so it sits above the pattern */
     background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/GPTurtleshell.png');
     background-repeat: repeat, repeat;
     background-position: 0 0, 0 0;
     background-attachment: scroll, scroll;
-    background-color: var(--shell-mid); /* fallback */
+    background-color: var(--shell-mid);
 }
 
 .footer, footer.bottom-panel {
@@ -235,7 +222,7 @@ footer.bottom-panel a:hover{ text-decoration: underline; color: #fff; }
     background-repeat: repeat, repeat;
     background-position: 0 0, 0 0;
     background-attachment: scroll, scroll;
-    background-color: var(--shell-mid); /* fallback */
+    background-color: var(--shell-mid);
 }
 
 .menu-container {

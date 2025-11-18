@@ -102,12 +102,12 @@
         </section>
         <section style="margin-top:34px; text-align:center;">
             <h3 style="margin-bottom:14px;">Check out our First Menu</h3>
-            <!-- Interactive menu component (replaces static image) -->
+            
             <div class="menu-container" role="region" aria-label="Turtle Eats Menu">
                 <h1 class="title">TURTLE EATS</h1>
                 <p class="subtitle">Plant-Based Japanese Cuisine</p>
 
-                <!-- DRINKS -->
+                
                 <section class="menu-section">
                     <h2>DRINKS</h2>
                     <div class="item">
@@ -131,7 +131,7 @@
                     </div>
                 </section>
 
-                <!-- SIDES -->
+                
                 <section class="menu-section">
                     <h2>SIDES</h2>
 
@@ -166,7 +166,7 @@
                     </div>
                 </section>
 
-                <!-- MAINS -->
+                
                 <section class="menu-section">
                     <h2>MAINS</h2>
 
@@ -223,7 +223,6 @@
                     URL.revokeObjectURL(urlObj);
                     if(status) { status.textContent = 'Menu download started.'; }
                 }).catch(function(){
-                    // Fallback: open image in new tab (useful for iOS where download may be limited)
                     window.open(url, '_blank');
                     if(status) { status.textContent = 'Opened menu in a new tab.'; }
                 });
